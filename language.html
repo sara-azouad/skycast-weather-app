@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App with Map and Location Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        #weather {
+            margin-bottom: 20px;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+            border: 1px solid #ccc;
+        }
+
+        #locationInput {
+            margin: 10px 0;
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌤️ Weather App with Map</h1>
+    <div id="weather">Getting your weather...</div>
+
+    <!-- Location Input Box -->
+    <input type="text" id="locationInput" placeholder="Enter city name..." />
+    <button onclick="getWeatherFromInput()">Get Weather</button>
+
+    <div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script>
+        const apiKey = '3076c16f8a2c96369e9be00b937fec7'; // 🔁 Replace with your OpenWeatherMap API key
+
+        // Get location automatically if allowed
+        navigator.geolocation.getCurrentPosition(success, error, {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 0
+        });
+
+        function success(position) {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            console.log(`Detected location: Latitude: ${lat}, Longitude: ${lon}`);
+            getWeather(lat, lon);
+            initMap(lat, lon);
+        }
+
+        function error(err) {
+            document.getElementById("weather").innerText = "Unable to get your location: " + err.message;
+            document.getElementById("map").style.display = "none";
+        }
+
+        // Fetch weather data for the given latitude and longitude
+        function getWeather(lat, lon) {
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.cod === 200) {
+                        const weatherDiv = document.getElementById("weather");
+                        weatherDiv.innerHTML = `
+                            <h2>📍 ${data.name}</h2>
+                            <p>${data.weather[0].description}</p>
+                            <p>🌡️ Temperature: ${data.main.temp}°C</p>
+                            <p>💧 Humidity: ${data.main.humidity}%</p>
+                        `;
+                    } else {
+                        document.getElementById("weather").innerText = "Weather data not available.";
+                    }
+                })
+                .catch(err => {
+                    document.getElementById("weather").innerText = "Error getting weather data.";
+                    console.error(err);
+                });
+        }
+
+        // Initialize the map
+        function initMap(lat, lon) {
+            const map = L.map('map').setView([lat, lon], 13);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
+            L.marker([lat, lon]).addTo(map)
+                .bindPopup('📍 You are here')
+                .openPopup();
+        }
+
+        // Get weather based on manual location input
+        function getWeatherFromInput() {
+            const city = document.getElementById("locationInput").value.trim();
+
+            if (city === "") {
+                document.getElementById("weather").innerText = "Please enter a valid city name.";
+                return;
+            }
+
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.cod === 200) {
+                        const lat = data.coord.lat;
+                        const lon = data.coord.lon;
+
+                        // Update weather and map
+                        document.getElementById("weather").innerHTML = `
+                            <h2>📍 ${data.name}</h2>
+                            <p>${data.weather[0].description}</p>
+                            <p>🌡️ Temperature: ${data.main.temp}°C</p>
+                            <p>💧 Humidity: ${data.main.humidity}%</p>
+                        `;
+
+                        initMap(lat, lon);
+                    } else {
+                        document.getElementById("weather").innerText = "City not found. Try again.";
+                        document.getElementById("map").style.display = "none";
+                    }
+                })
+                .catch(err => {
+                    document.getElementById("weather").innerText = "Error getting weather data.";
+                    console.error(err);
+                });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,589 @@
+/* Header Styles */
+.header{
+
+background-color: #389dff;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 10px 50px;
+}
+.logo{
+    width: 150px; 
+   height: 70px;
+   margin: 0%;
+}
+.headerlinks a{
+    color: white;
+    padding: 5px 15px;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+
+}
+
+.headerlinks a:hover{
+background-color: #2493ff;
+color: white !important; /* Ensures readability */
+
+}
+body {
+    margin: 0%;
+    font-family: "Gidole", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.link a{
+    color: white;
+    padding: 5px 15px;
+    text-decoration: none;
+    border-radius: 15px;
+}
+.link a:hover{
+background-color: #2493ff;
+    color: white !important; /* Ensures readability */
+}
+
+/* Landing Page Styles */
+.landingpage{
+    background-color: #389dff;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 50px;
+   align-items: center;
+   color: aliceblue;
+   border-radius: 0 0 50px 50px ;
+}
+.search input {
+border-radius: 50px;
+border: none;
+outline: none;
+padding: 0 10px;
+height: 30px;
+outline: none;
+
+}
+.search{
+    display: flex;
+}
+.search button{
+    position: absolute;
+    left: 200px;
+    height: 30px;
+}
+.image img {
+    border-radius: 20px;
+    width: 280px;
+}
+.landingpageleft {
+    width: 450px;
+}
+/* Weekly Update Section */
+.weeklyupdate {
+    padding: 25px 50px;
+}
+.WeeklyWeatherForcast{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.WeeklyWeatherForcast h1{
+    margin-top: 0%;
+}
+.weeklyupdate span 
+{
+    color: #2493ff;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.weatherdata{
+    background-color: #9acdff;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    width: 300px;
+    justify-content: center;
+flex-direction: column;
+}
+.optionalunits{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card h1{
+    color: #2493ff;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.cardinfo{
+    display: flex;
+ background-color:  #85c3ff;
+    justify-content: space-between;
+    padding: 10px 25px;
+}
+.card{
+    background-color:  #85c3ff;
+    width: 250px;
+    border-radius: 20px;
+    height: auto;
+    border-radius: 20px; 
+    overflow: hidden; 
+   
+}
+.Weeklyweathercard{
+display: flex;
+gap: 12px;
+}
+
+.card-info img {
+    width: 50px;
+}
+
+
+/* FORM  */
+.formContainer {
+    display: flex;
+    padding: 40px;
+    margin: auto;
+    justify-content: center;
+    max-width: 1300px;
+}
+
+.formContainer form {
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 400px;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    height: 450px;
+}
+
+.formContainer form input, textarea {
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: large;
+    /* width: 100%; */
+}
+
+.formContainer input {
+    height: 50px;
+    border-radius: 50px;
+}
+
+.formContainer textarea {
+    border-radius: 20px;
+    padding-top: 10px;
+    resize: none;
+}
+.logo img {
+    width: 250px;
+}
+.formContainer button{
+    padding: 8px 8px;
+}
+/* Buttons */
+.btn{
+    background-color: #0040ff;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    }
+    .btn:hover{
+    
+        background: #0000ff;
+        background: -webkit-linear-gradient(left, #0000ff,  #00ffcc);
+        background: -moz-linear-gradient(left, #0000ff,  #00ffcc);
+        background: -ms-linear-gradient(left, #0000ff,  #00ffcc);
+        background: -o-linear-gradient(left, #0000ff, #00ffcc);
+        background: linear-gradient(to right, #0000ff,  #00ffcc);
+    }
+
+.button-link {
+    color: initial !important;
+    padding: 0 !important;
+}
+.weather-tips {
+    background-color: #f0f8ff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+  
+  .weather-tips img {
+    display: block;
+    margin: 0 auto 20px; /* Center the image and add spacing below */
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+  }
+  
+  .weather-tips h2 {
+    text-align: center;
+    color: #2b5876;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px; /* Add minimal spacing below the title */
+  }
+  
+  .tips-container {
+    display: flex;
+    gap: 20px; /* Space between boxes */
+    margin-top: 20px;
+  }
+  
+  .tips-container article {
+    flex: 1; /* Make all boxes the same width */
+    background-color: #ffffff; /* White background for contrast */
+    padding: 15px;
+    border: 2px solid #1b92b9; /* Green border as the "îtar" */
+    border-radius: 10px; /* Rounded corners for elegance */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    text-align: center; /* Align text inside the box */
+  }
+  
+  .tips-container h3 {
+    font-family: 'Abel', sans-serif;
+    color: #333;
+  }
+  
+  .tips-container p {
+    font-family: 'Inter', sans-serif;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  
+.weather-trends {
+    background-color: #f9f9f9;
+    padding: 25px;
+    margin: 20px 0;
+    border-left: 5px solid #477fcd; /* Ligne verte sur le côté gauche */
+  }
+  
+  .weather-trends h2 {
+    color: #477fcd;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+  }
+  
+  .weather-trends article {
+    margin-bottom: 20px;
+  }
+  
+  .weather-trends h3 {
+    color: #333;
+    font-family: 'Abel', sans-serif;
+  }
+  
+  .weather-trends p {
+    color: #555;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+ 
+  .weather-tips .tips-image {
+    display: block;
+    margin: 10px auto; /* Centre l'image horizontalement */
+    border-radius: 10px; /* Coins arrondis pour une esthétique plus douce */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet moderne */
+  }
+
+  .city {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .temp, .humidity, .wind {
+    font-size: 1.5rem;
+    margin: 5px 0;
+  }
+  /*cards*/
+  .Weeklyweathercard {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents stacking */
+    justify-content: space-between; /* Distributes cards evenly */
+    align-items: center; /* Aligns them properly */
+    gap: 15px; /* Adds space between cards */
+    width: 100%; /* Ensures they stay in one row */
+    overflow: visible !important; /* Ensures all cards are shown */
+  }
+.card {
+ 
+    flex: 1 1 250px; /* Ensures cards scale properly */
+    flex-shrink: 0; /* Prevents shrinking */
+    min-width: 250px; /* Ensures each card has enough space */
+    max-width: 250px; /* Prevents cards from growing too big */
+    width: 250px; /* Fixed width prevents resizing issues */
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.card:hover {
+    transform: scale(1.05); /* Enlarges slightly on hover */
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3); /* Deepens shadow */
+}
+
+.card:active {
+    transform: scale(0.98); /* Shrinks slightly when clicked */
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4); /* Darker shadow */
+}
+main {
+    flex: 1; /* Pushes the footer down */
+    
+}
+
+footer{
+    margin-top: auto; /* Ensures footer sticks to bottom */
+    width: 100%;
+    background: #051c2b;
+    padding-top: 50px;
+    position: relative;
+    bottom: 0;
+}
+.container{
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.footer-content{
+     color: white !important;
+    
+    width: 33.3%;
+}
+h3{
+    color: white;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer-content p{
+    color: white;
+    width:190px;
+    margin: auto;
+    padding: 7px;
+}
+.footer-content ul{
+
+    text-align: center;
+}
+.list{
+    padding: 0;
+}
+.list li{
+    color: white;
+    width: auto;
+    text-align: center;
+    list-style-type:none;
+    padding: 7px;
+    position: relative;
+}
+.list li::before{
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #389dff;
+    transition-duration: .5s;
+}
+.list li:hover::before{
+    width: 70px;
+}
+.social-member{
+    text-align: center;
+    padding: 0;
+    color: darkblue;
+    font-size: 30px;
+}
+.img-fluide{
+    width: 250px;
+    height: auto;
+}
+h5.mn {
+    margin-top: 0; /* Removes any space above */
+    margin-bottom: 0; /* Removes any space below */
+  }
+  
+  small {
+    display: block; /* Ensures "Adviser" is treated as a block element */
+    margin-bottom: 0; /* Removes space below */
+  }
+  .info {
+    display: flex; /* Enables side-by-side layout */
+    justify-content: center; /* Aligns them neatly */
+    gap: 20px; /* Adds spacing between members */
+    flex-wrap: wrap; /* Prevents overflow */
+  }
+  
+  .team-etim {
+    width: 250px; /* Ensures uniform size */
+    flex: 1; /* Makes all items share space */
+    text-align: center;
+  }
+.social-icons{
+    text-align: center;
+    padding: 0;
+}
+
+.social-icons li{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+.social-icons i{
+    color: white;
+    font-size: 25px;
+}
+
+
+.team-etim:hover img{
+transform: scale(1,1);
+}
+.team-etim:hover{
+    height: 100%;
+}
+
+.team-etim.infor {
+border-radius: 38px 38px 0 0 ;
+}
+a:hover{
+    color: #389dff;
+}
+.social-icons i:hover{
+    color:#389dff;
+}
+.bottom-bar{
+    background: #389dff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+.bottom-bar p{
+    color: white;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
+}
+.footer-content .list li a {
+    color: white !important; /* Ensures the links in the footer stay white */
+    text-decoration: none;
+}
+
+.footer-content .list li a:hover {
+    color: white; /* Keeps them white even when hovered */
+}
+/*about section*/
+.about-section{
+padding: 120px 0;
+background: var(--light-pink-color);
+}
+.about-section .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+.about-section .about-image-wrapper .about-image{
+    width: 400px;
+    height: 400px;
+  /*object-fit: cover;
+    border-radius: var(--border-radius-circle);*/
+}
+.about-section .about-details .text {
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: var(--font-size-m);
+}
+.about-section .about-details{
+    max-width: 50%;
+}
+.section-title{
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+}
+
+html {
+position: relative;
+min-height: 100%;
+scroll-behavior: smooth;
+}
+
+
+:root {
+    --primary-color: #3498db; 
+    --font-size-l: 24px;
+    --font-size-m: 18px; 
+    --border-radius-circle: 99%;
+    --font-size-xl: 32px; /* Adjust size as needed */
+    --border-radius-s: 5px;
+    --secondary-color: #113a93; /* Example color */
+}
+.about-section .about-details .section-title{
+    padding: 0;
+}
+.about-section .social-links-list{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+.about-section .social-links-list .social-link{
+
+font-size: var(--font-size-l);
+transition: 0,2s ease;
+}
+
+.section-title::after{
+    margin-top: 15px;
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    background: var(--secondary-color);
+    border-radius: var(--border-radius-s);
+}
+
+/* Media query for responsive styles */
+@media (max-width: 768px) {
+    .loginbox {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        margin: auto; /* Centers the box horizontally */
+    }
+    .landingpage {
+        flex-direction: column;
+     text-align: center; /* Centers text for better readability */
+        padding: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .tips-container {
+      flex-direction: column; /* Stack the boxes vertically on small screens */
+      align-items: center;
+    }
+  
+    .tips-container article {
+      width: 100%;
+    }
+  }
+  
+

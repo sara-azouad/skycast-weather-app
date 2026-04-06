@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG IN</title>
+    <link rel="stylesheet" href="meteo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+     <section>
+    <div class="headerContainer">
+        <div class="header">
+            <a href="meteo.html" class="logo">
+                <img src="images/s3.png" alt="logo">
+            </a>
+            <div class="headerlinks">
+                <a href="meteo.html">Home</a>
+                <a href="#">Current Location</a>
+                <a href="language.html">frensh</a>
+                <a href="contact.html">Contact </a>
+                <button class="btn">sign in</button>
+            </div>
+        </div>
+    </div>
+</section>
+    <div class="bodylogin" >
+        <div class="loginbox">
+       <form action="">
+       <h2>login</h2>
+       <div class="inputbox">
+<span class="icon"><ion-icon name="mail"></ion-icon></span>
+<input type="email"required maxlength="25"aria-label="Enter your email">
+
+<label>Email</label>
+       </div>
+       <div class="inputbox">
+        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+        <input type="password"required maxlength="15"aria-label="Enter your password">
+        <label>Password</label>
+               </div>
+               <div class="rememberpasword"> 
+                <label><input type="checkbox">Remember me </label>
+                <a href="#">Forgot Password?</a>
+               </div>
+               <button class="btn login-btn" id="btnb"aria-label="Log in">login</button>
+               <div class="registerlink">
+               <p>Dont Have An Account?<a href="#">Register</a></p>
+               </div>
+       </form>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+const loginButton = document.getElementById("btnb");
+
+    loginButton.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Select the input fields using aria-label
+      const emailInput = document.querySelector('input[aria-label="Enter your email"]');
+      const passwordInput = document.querySelector('input[aria-label="Enter your password"]');
+
+      const email = emailInput.value.trim();
+      const password = passwordInput.value.trim();
+
+      // Check the credentials
+      if (email === "admin1@gmail.com" && password === "1234") {
+        alert("Bienvenue admin !");
+        // Optional: Redirect
+        // window.location.href = "meteo.html";
+      } else {
+        alert("Identifiants incorrects");
+      }
+    });
+  });
+</script>
+<style>
+    
+/* sign in */
+.bodylogin {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    background-color: white;
+   
+}
+.loginbox {
+ width: 400px;
+    background-color: #9acdff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.loginbox h2{
+    font-size: 2em;
+    text-align: center;
+}
+.inputbox{
+    width: 300px;
+   margin: 30px 0;
+   border-bottom: 2px solid #120202;
+   position: relative;
+}
+.inputbox input:focus~label,
+.inputbox input:valid~label{
+    top:-5px;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    font-size: 1em;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: -5s;
+}
+.inputbox input{
+width: 100%;
+height: 50px;
+background: transparent;
+border: none;
+outline: none;
+font-size: 1em;
+color: #ffff;
+padding: 0 40px 0 5px;
+}
+.inputbox .icon{
+    position: absolute;
+    right: 8px;
+    color: #ffff;
+    font-size: 1,2em;
+    line-height: 57px;
+}
+.rememberpasword{
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #ffff;
+    display: flex;
+    justify-content: space-between;
+}
+.rememberpasword label input {
+    margin-right: 3px;
+}
+.rememberpasword a {
+color: #ffff;
+text-decoration: none;
+}
+.rememberpasword  a:hover{
+    text-decoration: underline;
+}
+.registerlink{
+    font-size: .9em;
+    text-align: center;
+    color: #ffff;
+    margin: 25px 0 10px;
+}
+.registerlink  p a{
+color: #ffff;
+text-decoration: none;
+font-weight: 600;
+}
+.registerlink p a:hover{
+    text-decoration: underline;
+}
+
+.logo img{
+    width: 150px;
+    height: 70px;
+}
+.login-btn {
+    width: 300px; /* Bigger width */
+    height: 40px; /* Bigger height */
+    font-size: 18px; /* Larger text size */
+    background-color: #0040ff; /* Matches other buttons */
+    border: none;
+    border-radius: 15px; /* Matches the base `.btn` style */
+    color: white; /* Ensure the text is visible */
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: linear-gradient(to right, #0000ff,  #00ffcc); /* Matches hover effect */
+}
+.icon {
+    color: #ffffff;
+    font-size: 1.5em;
+}
+</style>
+
+</div>
+
+<footer >
+        <div class="container">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p>Email:Info@example.com</p>
+                <p>Phone:+121 56556 565556</p>
+                <p>Address:Your Address 123 street</p>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                 <ul class="list">
+                    <li><a href="meteo.html">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="">Current Location</a></li>
+                 </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                 <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                 <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                 <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                 <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+                </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2023 your company . All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

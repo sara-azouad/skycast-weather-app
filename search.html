@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Weather Result</title>
+  <link rel="stylesheet" href="meteo.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+  <div class="result">
+  <header><i class="bx bx-left-arrow-alt">Weather Result</i>
+  </header>
+  <main>
+    <section class="result-part">
+      <img src="images/result.png"  width="200px" height="200px"  alt="weather icon ">
+      
+    <div>
+      <h2 class="city">Casablanca</h2>
+      <p class="temp">Temperature: </p>
+      <p class="humidity">Humidity: </p>
+      <p class="wind">Wind Speed: </p>
+    </div>
+    <div class="location">
+      <i class="fa-solid fa-location-dot"></i>
+
+   <span> Maroc</span>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <script src="meteo.js"></script>
+  <style>
+    body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background:#389dff;
+     
+    }
+    header i{
+      cursor: pointer;
+      font-size: 30px;
+      margin-right: 8px;
+    }
+    .result{
+     
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 7px;
+      width: 400px;
+      background-color: #ffff;
+    }
+    .result header{
+      color: #389dff;
+      font-size: 21px;
+      font-weight: 500;
+      padding: 16px 15px;
+      border-bottom: 1px solid #bfbfbf;
+      display: flex;
+      align-items: center;
+    }
+  </style>
+ 
+</body>
+</html>

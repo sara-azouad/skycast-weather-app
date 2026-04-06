@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset ="utf-8">
+    <title>Weather Website</title>
+    <link rel="stylesheet"href="meteo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Abel&family=Gidole&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<div id="google_translate_element"></div> <script type="text/javascript"> function googleTranslateElementInit() { new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element'); } </script> <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+  <header>
+    <!---header------>
+    <div class="header"> 
+        <img class ="logo " src="images/s3.png"width="50">
+        <div class="link">
+          <nav aria-label="Main Navigation">
+            <a href="meteo.html" >Home</a>
+         
+            <a  href="language.html" >MAP</a>
+            <a href="#aboutus">About Us</a>
+            <a href="contact.html">Contact </a>
+            <a href="login.html" class="button-link">
+              <button   class="btn">Sign In</button>
+          </a>
+          </nav>
+        </div>
+    </div>
+  </header>
+  <main>
+   
+  <!---landing page ------>
+  <div class ="landingpage ">
+    <div class="landingpageleft">
+    <h1>WELCOME TO YOUR TRUSTED WEATHER PORTAL!</h1>
+    <p> 
+       Get precise forecasts, real-time weather alerts, and detailed climate information, all at your fingertips.
+       Whether you’re planning a getaway, organizing your day, or just curious about the conditions outside, our platform is designed to meet your needs.
+        Stay informed and ready for anything with reliable and accessible weather data. </p>
+        
+    <!-- Barre de recherche pour saisir une ville -->
+ <div class="search">
+  <input id="cityInput" placeholder="Select a city..." maxlength="15" required />
+  <button id="searchBtn" class="btn">SEARCH</button>
+</div>
+</div>
+</div> 
+</div>
+</main>
+<script src="meteo.js"></script>
+
+    <!---after landing page ------>
+      <!---prevision 15jours  ------>
+      <div class="weeklyupdate">
+      <span> Hourly Report </span>
+      <div class="WeeklyWeatherForcast">
+      <h1>Weekly Weather Forcast </h1>
+      <button class="btn">
+        view all </button>  </div> 
+  <section >
+    
+<div class="Weeklyweathercard" >
+     <!-- Chaque "card" représente un jour avec les prévisions -->
+  <div class="card">
+   <H1>MONDAY</H1>
+    <img src="images/meteo4.png"alt="Weather forecast for Monday" width="250" height="100"/>
+    <div class="cardinfo">
+      <div class="cardname">
+   <p><strong>HUMIDITE</strong> 71 %</p>
+   <p><strong>VISIBILITE</strong>	10 km</p>
+    <p><strong>  NUAGES</strong>	20 % </p>
+    <p> <strong> BASE DE NUAGE</strong> 33 m</p>
+      </div>
+    </div>
+  </div>
+ 
+    <div class="card">
+     <H1>THUERSDAY</H1>
+      <img src="images/meteo2.png" alt="Weather forecast for Thuersday"width="250" height="100"/>
+      <div class="cardinfo">
+        <div class="cardname">
+     <p><strong>HUMIDITE </strong>71 %</p>
+     <p><strong>VISIBILITE</strong> 10 km</p>
+      <p> <strong>NUAGES</strong>20 % </p>
+      <p><strong> BASE DE NUAGE </strong>33 m</p>
+        </div>
+      </div>
+    </div>
+      <div class="card">
+       <H1>WEDNESDAY</H1>
+        <img src="images/meteo8.png"alt="Weather forecast for Wednesday" width="250" height="100"/>
+        <div class="cardinfo">
+          <div class="cardname">
+       <p><strong>HUMIDITE</strong> 70 %</p>
+       <p><strong> VISIBILITE	</strong>50 km</p>
+        <p><strong>NUAGES	</strong>30% </p>
+        <p><strong>BASE DE NUAGE</strong> 22 m</p>
+          </div>
+        </div>
+      </div>
+   
+      <div class="card">
+       <H1>TUESDAY</H1>
+        <img src="images/meteo6.png" alt="Weather forecast for Tuesday"width="250" height="100"/>
+        <div class="cardinfo">
+          <div class="cardname">
+       <p><strong>HUMIDITE</strong> 80 %</p>
+       <p><strong> VISIBILITE	</strong>20 km</p>
+        <p><strong>NUAGES</strong>70 % </p>
+        <p><strong> BASE DE NUAGE</strong>  50 m</p>
+          </div>
+        </div>
+      </div>
+   
+        <div class="card">
+         <H1>Friday</H1>
+          <img src="images/meteo5.png"alt="Weather forecast for Friday" width="250" height="100"/>
+          <div class="cardinfo">
+            <div class="cardname">
+         <p><strong>HUMIDITE</strong> 73 %</p>
+         <p><strong> VISIBILITE	</strong>10km</p>
+          <p> <strong> NUAGES</strong>	90% </p>
+          <p><strong>BASE DE NUAGE </strong>66 m</p>
+            </div>
+          </div>
+        </div>
+   
+          <div class="card">
+           <H1>SATURDAY</H1>
+            <img src="images/meteo7.png" alt="Weather forecast for Saturday"width="250" height="100"/>
+            <div class="cardinfo">
+              <div class="cardname">
+           <p><strong>HUMIDITE</strong> 30 %</p>
+           <p><strong> VISIBILITE</strong>	4km</p>
+            <p><strong>NUAGES</strong>	60% </p>
+            <p><strong> BASE DE NUAGE</strong> 50 m</p>
+              </div>
+            </div>
+          </div>
+      
+            <div class="card">
+             <H1>SUNDAY</H1>
+              <img src="images/meteo3.png" alt="Weather forecast for Sunday"width="250" height="100"/>
+              <div class="cardinfo">
+                <div class="cardname">
+             <p><strong>HUMIDITE</strong> 73 %</p>
+             <p><strong>VISIBILITE</strong>	8 km</p>
+              <p> <strong> NUAGES</strong>	50 % </p>
+              <p> <strong>BASE DE NUAGE</strong> 48 m</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="weather-trends">
+            <h2>Tendances Climatiques</h2>
+            <article>
+              <h3>Tempête Tropicale Debbie</h3>
+              <p style="display: inline;">
+                Une tempête tropicale a récemment frappé le Queensland, en Australie, provoquant des vents violents et des pluies torrentielles.
+                <a href="https://www.ouest-france.fr/monde/australie/australie-le-queensland-attend-un-tres-violent-cyclone-4888177" target="_blank" style="display: inline; color: blue; text-decoration: underline;">
+                  En savoir plus
+                </a>
+              </p>
+              
+            </article>
+            <article>
+              <h3>Chaleur Inhabituelle en Europe</h3>
+              <p>Des températures exceptionnellement élevées ont été enregistrées dans plusieurs pays européens, atteignant 21°C à Paris.</p>
+            </article>
+          </section>
+          
+          <section class="weather-tips">
+            <h2>Conseils Pratiques</h2>
+            <img src="https://inquisitive-assets-app2.imgix.net/y0faz8aOzcRZkl2Q0xMxydrxxs8QwrYA.jpg?auto=format&fm=pjpg&w=1200&h=630&q=75&fit=crop&fp-x=0.5&fp-y=0.448097839482423&fp-z=1&crop=focalpoint&s=31854fd118a7b1692ef603b20a88255a" 
+                 alt="Conseil d'habillement en cas de pluie" width="300" class="tips-image">
+           
+            <div class="tips-container">
+              <article>
+                <h3>Quoi Porter ?</h3>
+                <p>En cas de pluie, n'oubliez pas votre parapluie et portez des chaussures imperméables. Par temps chaud, privilégiez des vêtements légers et respirants.</p>
+              </article>
+              <article>
+                <h3>Précautions en Cas d'Orage</h3>
+                <p>Évitez de rester à l'extérieur ou sous les arbres. Débranchez les appareils électroniques pour éviter les surtensions.</p>
+              </article>
+              <article>
+                <h3>Voyages et Déplacements</h3>
+                <p>Vérifiez les conditions routières avant de partir. En cas de neige ou de verglas, conduisez prudemment et équipez votre véhicule de pneus adaptés.</p>
+              </article>
+            </div>
+          </section>
+          <section>
+            <div class="weathermember">
+              <div class="team">
+                <div class="teamcards">
+                  <h1 class="title section">Our Weather Member</h1>
+                </div>
+                
+                <!-- Container for all members -->
+                <div class="info">
+                  <div class="team-etim">
+                    <div>
+                      <img class="img-fluide" src="https://themesfamily.com/2024/mugni/assets/img/team/1.png" alt="weathermember">
+                    </div>
+                    <h5 class="mn">Full Name</h5>
+                    <small>Adviser</small>
+                    <div class="infor">
+                      <a class="social-member" href=""><i class="fab fa-facebook"></i></a>
+                      <a class="social-member" href=""><i class="fab fa-instagram"></i></a>
+                      <a class="social-member" href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+          
+                  <div class="team-etim">
+                    <div>
+                      <img class="img-fluide" src="https://themesfamily.com/2024/mugni/assets/img/team/2.png" alt="weathermember">
+                    </div>
+                    <h5 class="mn">Full Name</h5>
+                    <small>Weather</small>
+                    <div class="infor">
+                      <a class="social-member" href=""><i class="fab fa-facebook"></i></a>
+                      <a class="social-member" href=""><i class="fab fa-instagram"></i></a>
+                      <a class="social-member" href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+          
+                  <div class="team-etim">
+                    <div>
+                      <img class="img-fluide" src="https://themesfamily.com/2024/mugni/assets/img/team/3.png" alt="weathermember">
+                    </div>
+                    <h5 class="mn">Full Name</h5>
+                    <small>Weather</small>
+                    <div class="infor">
+                      <a class="social-member" href=""><i class="fab fa-facebook"></i></a>
+                      <a class="social-member" href=""><i class="fab fa-instagram"></i></a>
+                      <a class="social-member" href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+          
+                  <div class="team-etim">
+                    <div>
+                      <img class="img-fluide" src="https://themesfamily.com/2024/mugni/assets/img/team/4.png" alt="weathermember">
+                    </div>
+                    <h5 class="mn">Full Name</h5>
+                    <small>Weather</small>
+                    <div class="infor">
+                      <a class="social-member" href=""><i class="fab fa-facebook"></i></a>
+                      <a class="social-member" href=""><i class="fab fa-instagram"></i></a>
+                      <a class="social-member" href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--  about section -->
+            <section   id="aboutus" class="about-section">
+           <div class="section-content">
+           <div  class="about-image-wrapper">
+           <img src="images/about.jfif" 
+           alt="about" class="about-image">
+           </div>
+           <div class="about-details">
+           <h2 class="section-title">About Us </h2>
+           <p class="text">
+            Welcome to SetWeb Meteo, your trusted source for accurate and insightful weather information. 
+            At SetWeb Meteo, we understand the critical role weather plays in our daily lives—whether it's planning your day, 
+            safeguarding your community, or simply appreciating the beauty of nature.
+             Our mission is to deliver reliable, localized forecasts, real-time updates, and expert analysis to help you stay informed and prepared.
+             With a passion for meteorology and a commitment to excellence, 
+             SetWeb Meteo connects people with the skies, empowering them to navigate the ever-changing weather with confidence.  
+             <a href="https://www.environmentalscience.org/meteorology" >
+              <button class="btn">Learn More</button>
+          </a>
+           </p>
+           <div class="social-links-list">
+          <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+
+           </div>
+           </div>
+           
+            </section>
+          <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <h3>Contact Us</h3>
+                    <p>Email:Info@example.com</p>
+                    <p>Phone:+121 56556 565556</p>
+                    <p>Address:Your Address 123 street</p>
+                </div>
+                <div class="footer-content">
+                    <h3>Quick Links</h3>
+                     <ul class="list">
+                        <li><a href="meteo.html">Home</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="">Current Location</a></li>
+                     </ul>
+                </div>
+                <div class="footer-content">
+                    <h3>Follow Us</h3>
+                    <ul class="social-icons">
+                     <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                     <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                     <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                     <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                    </div>
+            </div>
+            <div class="bottom-bar">
+                <p>&copy; 2023 your company . All rights reserved</p>
+            </div>
+
+        </footer>
+          
+          
+          
+          
+  </body>
+</html>
+
