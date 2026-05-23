@@ -63,7 +63,7 @@ SkyCast/
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/skycast.git
+git clone https://github.com/saraazouad/skycast.git
 ```
 
 2. Open the project folder
