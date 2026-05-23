@@ -8,13 +8,13 @@ The application allows users to search for weather conditions, navigate between 
 ---
 
 ## Features
-- 🌍 Weather search functionality
-- 🔐 User login page
-- 🌐 Language selection page
-- 📞 Contact page
-- 📱 Responsive design
-- ⚡ Interactive user interface
-- ☁️ Modern weather application layout
+- Weather search functionality
+-  User login page
+-  Language selection page
+-  Contact page
+-  Responsive design
+-  Interactive user interface
+-  Modern weather application layout
 
 ---
 
@@ -88,12 +88,12 @@ cd skycast
 ---
 
 ## Future Improvements
-- 📅 Add 7-day weather forecast
-- 🌙 Add dark mode
-- 📍 Add geolocation support
-- 🔔 Weather notifications
-- 🌎 Multi-language support
-- 📊 Better weather visualization
+- Add 7-day weather forecast
+- Add dark mode
+- Add geolocation support
+- Weather notifications
+- Multi-language support
+- Better weather visualization
 
 ---
 
